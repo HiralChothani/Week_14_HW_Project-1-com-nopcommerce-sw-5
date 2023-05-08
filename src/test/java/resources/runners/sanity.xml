@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity suite" verbose="1">
+    <listeners>
+        <listener class-name="com.nopcommerce.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Sanity Test">
+        <groups>
+            <run>
+                <include name="sanity"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.nopcommerce.testsuite.ComputerPageTest"/>
+            <class name="com.nopcommerce.testsuite.ElectronicsPageTest"/>
+            <class name="com.nopcommerce.testsuite.HomePageTest"/>
+            <class name="com.nopcommerce.testsuite.ShoppingCartPageTest"/>
+            <class name="com.nopcommerce.testsuite.LoginPageTest"/>
+        </classes>
+    </test>
+</suite>
